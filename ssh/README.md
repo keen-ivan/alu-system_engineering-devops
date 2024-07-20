@@ -1,1 +1,1 @@
-this is a readme file
+**Task:** Setting and connecting to server using Secure Shell

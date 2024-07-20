@@ -1,11 +1,4 @@
-#!/usr/bin/env bash
-# This file configures the SSH client to use a specific private key and refuse password authentication.
-
-# Ensure ~/.ssh/config exists and create if necessary
-mkdir -p ~/.ssh
-
-cat <<EOL > ~/.ssh/config
-Host *
-  IdentityFile ~/.ssh/school
-  PasswordAuthentication no
-EOL
+# Configuring ssh client so that I can connect to the server without typing a password.
+Host 18.209.69.111
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
