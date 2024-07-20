@@ -14,10 +14,10 @@ frontend keen-ivan-frontend
         bind *:80
         mode http
         default_backend keen-ivan-backend
-backend keen-ivan-backend
+backend keen-backend
         balance roundrobin
         server 6238-web-01 54.91.148.97 check
-        server 6238-web-02 54.91.148.97 check
+        server 6238-web-02 18.213.3.75 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
