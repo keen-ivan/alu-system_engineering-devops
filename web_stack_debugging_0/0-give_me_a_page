@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
-# Start Apache so as to return a
-# page containing Hello Holberton
+
+# Start Apache
 service apache2 start
+
+# Wait a few seconds to ensure Apache has time to start
+sleep 5
+
+# Check if Apache is running
+if systemctl is-active --quiet apache2; then
+    echo "apache2 is running"
+else
+    echo "apache2 is not running"
+fi
